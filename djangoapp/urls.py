@@ -17,10 +17,20 @@ from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path,include
 from djangoapp import views
+from djangoapp.views import PostsListAPI
 
-urlpatterns = [
-    path('',views.index),
-    path('create/',views.create),
-    path('read/<id>/',views.read)
-    ]
+urlpatterns = [       
+    #json api
+	path('api/posts/', PostsListAPI.as_view()), #리스트
+    path('api/posts/<id>', PostsListAPI.as_view()),#게시글 자세히보기    
+    #html api    
+    path('', views.index), #메인화면
+    path('create/', views.create), #만들기
+    path('read/<id>/', views.read),#게시글 자세히보기
+    path('update/<id>/', views.update),#게시글 수정
+    path('delete/', views.delete), #게시글 삭제
+    path("funding/<id>", views.funding), #게시글 1회 펀딩하기
+    
+    
+]
     
