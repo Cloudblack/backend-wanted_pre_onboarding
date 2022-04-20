@@ -12,7 +12,7 @@ import datetime
 class PostsListAPI(APIView): #json api view
     def get(self, request,id=None):                 
         if 'order_by' in request.GET: # order_by를 받아 정렬한다          
-            if request.GET['order_by']=='총펀딩금액':
+            if request.GET['order_by']=='총펀딩금액': #request에서 GET으로 들어온 데이터
                post_list =Posts.objects.all().order_by('fund_now') #전체를 불러와 정렬
             elif request.GET['order_by']=='-총펀딩금액':
                 post_list =Posts.objects.all().order_by('-fund_now')
@@ -21,14 +21,14 @@ class PostsListAPI(APIView): #json api view
             elif request.GET['order_by']=='-생성일':
                 post_list =Posts.objects.all().order_by('-created_at')
         elif 'search' in request.GET: #search를 받아 제목에서 검색한다
-            post_list =Posts.objects.filter(title__icontains=request.GET['search'])
+            post_list =Posts.objects.filter(title__icontains=request.GET['search'])#__icontains를 사용해 값이 '포함된' 리스트를 가져온다 
         elif 'funding' in request.GET: #funding 숫자만큼 펀딩을한다
             if id != None: #id 가 있을때만 그 게시글을 펀딩
-                get_posts = Posts.objects.get(id=id)
-                fund_now=get_posts.one_fund*int(request.GET['funding'])
+                get_posts = Posts.objects.get(id=id) #id를 입력해 해당 데이터를 가져옴
+                fund_now=get_posts.one_fund*int(request.GET['funding'])#db에서 가져온 데이터는 형식이 유지되는데반해 request는 str
                 get_posts.fund_now+=fund_now                
                 get_posts.save()
-                serializer = PostsSerializer_detail(get_posts)
+                serializer = PostsSerializer_detail(get_posts) #queryset, 즉 모델 인스턴스를 json으로 변경
                 return Response(serializer.data)#redirect('/')
             return 
         else:
@@ -51,7 +51,7 @@ class PostsListAPI(APIView): #json api view
             get_post.percent_now=f"{fund_now}%"  
             
             get_post.save()              
-        serializer = PostsSerializer_list(post_list, many=True)
+        serializer = PostsSerializer_list(post_list, many=True) #many가 붙어 입력시 []로 묶어줘야한다
         return Response(serializer.data)
     def delete(self,request,id): #입력된 id의 글을 삭제         
         Posts.objects.filter(id=id).delete()
@@ -71,7 +71,7 @@ class PostsListAPI(APIView): #json api view
         for get_post in request.data:
             get_post['fund_now']=0
         serializer = PostsSerializer(data = request.data, many=True) #입력된값    
-        if serializer.is_valid():
+        if serializer.is_valid(): #이유는 잘 모르겠으나 .is_valid를 사용해야한다
             serializer.save() 
             return Response(serializer.data ,status=200)
 """ 데이터 추가 예시
