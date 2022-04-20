@@ -22,6 +22,22 @@
     > 상품등록을 위해 먼저 DB(postgresql)를 Django에 연결  
     > 제목, 게시자명, 상품설명, 목표금액, 펀딩종료일, 1회펀딩금액을 입력하면 DB에 등록된다  
     > db값을 직접 넣을수있는데 현재 펀드금액(fund_now)은 반드시 0으로 들어가게 만들었다(달성률,참여인원등도 자동으로 0이된다)  
+    ```
+    DB table
+    --------
+    title : 제목
+    uploader : 작성자
+    product_desc : 상품 설명
+    target : 목표 금액
+    fund_now : 현재 펀드 금액
+    end_day : d-day
+    target_day : 종료일
+    one_fund : 1회 펀딩 금액
+    created_at : 작성일
+    updated_at : 수정일
+    Peoplecount : 참여 인원 수
+    percent_now : 달성률
+    ```
 
   - *상품을 수정합니다.*
     - *단, 모든 내용이 수정 가능하나 '목표금액'은 수정이 불가능합니다.*
