@@ -102,92 +102,92 @@
   
   ## JSON API
   ### 상품 리스트 가져오기    
-  - ![image](https://user-images.githubusercontent.com/86823305/164138583-3e2733d2-df11-4c93-b268-498e3ad489e9.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164138583-3e2733d2-df11-4c93-b268-498e3ad489e9.png)
   - 상품의 리스트를 가져온 화면으로(api/posts) 제목(title), 게시자명(uploader), 총펀딩금액(fund_now), 달성률(percent_now), D-day(end_day) 가 포함되어있다
     
   ### 상품 리스트 검색 
-  - ![image](https://user-images.githubusercontent.com/86823305/164144444-a2e36666-d568-4994-babb-31bf41f4fb4f.png)
-  - ![image](https://user-images.githubusercontent.com/86823305/164144466-0caf962c-f6cc-4c56-aab6-6d89f0c73a21.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144444-a2e36666-d568-4994-babb-31bf41f4fb4f.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144466-0caf962c-f6cc-4c56-aab6-6d89f0c73a21.png)
   - 위의 사진처럼 (api/posts?search=값)을 통해 쿼리 값이 들어간 title을 검색 할 수 있다 
     
   ### 상품 리스트 정렬
-  - ![image](https://user-images.githubusercontent.com/86823305/164144501-e5d52a1c-dbe1-43a1-bea6-5ada56f51f85.png)
-  - ![image](https://user-images.githubusercontent.com/86823305/164144520-00854d00-058d-42ef-97d5-047075b10c42.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144501-e5d52a1c-dbe1-43a1-bea6-5ada56f51f85.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144520-00854d00-058d-42ef-97d5-047075b10c42.png)
   - 위의 사진처럼 (api/posts?order_by=값)을 통해 정렬을 할수 있다 현재 총펀딩금액, -총펀딩금액 , 생성일, -생성일 네가지가 가능하다
     
   ### 상품 등록
-  - ![image](https://user-images.githubusercontent.com/86823305/164141349-97ddfb6b-438b-4126-a1c5-7f431972849c.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164141349-97ddfb6b-438b-4126-a1c5-7f431972849c.png)
   - 하단에 보면 post를 할 수 있는 칸이있는데 상품 리스트를 띄워 둔 상태로 post를 하면 새로운 상품을 추가 할 수 있다.
   - 새로운 글을 등록시 제목, 게시자명, 상품설명, 목표금액, 펀딩종료일(ex 2022-05-05), 1회펀딩금액을 입력하면 된다
   - []안에 여러 글을 넣으면 한번에 여러 글을 등록할 수 있다 
     
   ### 상품 상세 페이지
-  - ![image](https://user-images.githubusercontent.com/86823305/164144553-81b47aac-52a5-43d7-a6d6-cff46778df11.png)
-  - ![image](https://user-images.githubusercontent.com/86823305/164144568-19023f3f-8b6a-4233-a0cc-5d53158ea0a9.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144553-81b47aac-52a5-43d7-a6d6-cff46778df11.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144568-19023f3f-8b6a-4233-a0cc-5d53158ea0a9.png)
   - 상품의 상세 페지이로 (api/posts/<id>) 제목(title), 게시자명(uploader), 총펀딩금액(fund_now), 달성률(percent_now), D-day(end_day), 상품설명(product_desc), 목표금액(target)  참여자 수(peoplecount)가 포함되어있다
   
   ### 상품 수정
-  - ![image](https://user-images.githubusercontent.com/86823305/164142113-8ef92ea9-b68d-4ab6-a8f9-2c583dcc4b2c.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164142113-8ef92ea9-b68d-4ab6-a8f9-2c583dcc4b2c.png)
   - 상품 상세 페이지에 들어온상태로 상품을 등록하는 것처럼 post를 하면 현재 글이 수정이된다
-  - ![image](https://user-images.githubusercontent.com/86823305/164142809-c05f1a83-2703-4f0e-a829-7fd765b3ea9f.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164142809-c05f1a83-2703-4f0e-a829-7fd765b3ea9f.png)
   - 단 목표금액은 바뀌지않는다
   
   ### 상품 삭제
-  - ![image](https://user-images.githubusercontent.com/86823305/164144627-25e322c3-8657-424b-a194-e05337dbf18d.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144627-25e322c3-8657-424b-a194-e05337dbf18d.png)
   - 상품 상세 페이지에서 DELETE 버튼을 누르게되면 해당 글이 삭제된다
-  - ![image](https://user-images.githubusercontent.com/86823305/164143062-bc766671-b539-4865-93d3-5728295ba55d.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164143062-bc766671-b539-4865-93d3-5728295ba55d.png)
   
   ### 상품 펀딩하기
-  - ![이미지 1129](https://user-images.githubusercontent.com/86823305/164144799-73c23dfc-ae03-433e-8e29-84b1cb481162.png)
+  > ![이미지 1129](https://user-images.githubusercontent.com/86823305/164144799-73c23dfc-ae03-433e-8e29-84b1cb481162.png)
   - (api/posts/<id>?funding=<num>) 해당 id를 가진 글에 funding을 요청하면 funding의 값만큼 펀딩한다 사진에선 알 수없지만 1회 펀딩 금액은 150이었고 2회의 펀딩으로 2100=>2300이 되었다
-  - ![image](https://user-images.githubusercontent.com/86823305/164144655-66553db4-e3a8-4bb8-a5b4-cdb964cc9555.png)
-  - ![image](https://user-images.githubusercontent.com/86823305/164144688-fcb50b29-2143-4d89-9532-12ab2b0c0ed3.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144655-66553db4-e3a8-4bb8-a5b4-cdb964cc9555.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164144688-fcb50b29-2143-4d89-9532-12ab2b0c0ed3.png)
 
 
 
   ## HTML API
   ### 상품 리스트 가져오기    
-  - ![image](https://user-images.githubusercontent.com/86823305/164155432-7be3a728-19cd-468b-85f6-167e1ae94185.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164155432-7be3a728-19cd-468b-85f6-167e1ae94185.png)
   - 상품의 리스트를 가져온 화면으로(/) 제목(title), 게시자명(uploader), 총펀딩금액(fund_now), 달성률(percent_now), D-day(end_day) 가 포함되어있다
     
   ### 상품 리스트 검색 
-  - ![image](https://user-images.githubusercontent.com/86823305/164155490-cf04541e-98a0-482b-a16d-cd9a118fbf96.png)
-  - ![image](https://user-images.githubusercontent.com/86823305/164156108-5dafa821-94ad-4d30-9a05-5dba576ae7ae.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164155490-cf04541e-98a0-482b-a16d-cd9a118fbf96.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156108-5dafa821-94ad-4d30-9a05-5dba576ae7ae.png)
   - 값을 입력하고 버튼을 이용해(api/posts?search=값) title을 검색 할 수 있다 
     
   ### 상품 리스트 정렬
-  - ![image](https://user-images.githubusercontent.com/86823305/164156190-6fe2d3a4-4d42-4855-87f8-dafa74c8a31d.png)
-  - ![image](https://user-images.githubusercontent.com/86823305/164156214-7d2396b8-202e-40a8-a565-bd304fc8769d.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156190-6fe2d3a4-4d42-4855-87f8-dafa74c8a31d.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156214-7d2396b8-202e-40a8-a565-bd304fc8769d.png)
   - 값을 입력하고 버튼을 이용해(api/posts?order_by=값)을 통해 정렬을 할수 있다 현재 총펀딩금액, -총펀딩금액 , 생성일, -생성일 네가지가 가능하다
 
   ### 상품 등록
-  - ![image](https://user-images.githubusercontent.com/86823305/164156267-ca08121a-8e86-4b79-98cf-d3a19ed28a70.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156267-ca08121a-8e86-4b79-98cf-d3a19ed28a70.png)
   - Create 버튼으로 새로 만들 수 있다 (api/create)
-  - ![image](https://user-images.githubusercontent.com/86823305/164156289-261bce29-117b-429d-a181-537b1182498e.png)
-  - ![image](https://user-images.githubusercontent.com/86823305/164156343-4e6aabff-8528-4b81-96a2-54eca913c6ed.png)
-  - ![image](https://user-images.githubusercontent.com/86823305/164156363-0e0e1296-e831-416f-af75-01b1d6505b6e.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156289-261bce29-117b-429d-a181-537b1182498e.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156343-4e6aabff-8528-4b81-96a2-54eca913c6ed.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156363-0e0e1296-e831-416f-af75-01b1d6505b6e.png)
   - 새로운 글을 등록시 제목, 게시자명, 상품설명, 목표금액, 펀딩종료일(ex 2022-05-05), 1회펀딩금액을 입력하면 된다
     
   ### 상품 상세 페이지
-  - ![image](https://user-images.githubusercontent.com/86823305/164156599-962aa44e-5bc6-4be8-8321-23ab0040f725.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156599-962aa44e-5bc6-4be8-8321-23ab0040f725.png)
   - 리스트에서 해당 글을 클릭 (api/read/<id>)하면 상세 페이지를 볼 수 있다
   - 제목(title), 게시자명(uploader), 총펀딩금액(fund_now), 달성률(percent_now), D-day(end_day), 상품설명(product_desc), 목표금액(target)  참여자 수(peoplecount)가 포함되어있다
   
   ### 상품 수정
-  - ![image](https://user-images.githubusercontent.com/86823305/164156892-f3892f3a-95a7-4088-a191-86c681c16242.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156892-f3892f3a-95a7-4088-a191-86c681c16242.png)
   - 상품 상세 페이지에 들어온상태로 update 버튼(api/update/id)으로 수정 할 수 있다 
-  - ![image](https://user-images.githubusercontent.com/86823305/164156972-6952c535-9de3-450a-a4e9-20d52bf957cf.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164156972-6952c535-9de3-450a-a4e9-20d52bf957cf.png)
   - 기존값을 불러들여 수정 할 수 있다 단, 목표금액은 바뀌지않는다
   
   ### 상품 삭제
-  - ![image](https://user-images.githubusercontent.com/86823305/164157028-3726d591-5c13-40c4-b135-94617ece552b.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164157028-3726d591-5c13-40c4-b135-94617ece552b.png)
   - 상품 상세 페이지에서 DELETE 버튼을 누르게되면 해당 글이 삭제된다
-  - ![image](https://user-images.githubusercontent.com/86823305/164157056-69f18114-dc8b-48fc-8de1-310339e2ebb8.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164157056-69f18114-dc8b-48fc-8de1-310339e2ebb8.png)
   
   ### 상품 펀딩하기
-  - ![image](https://user-images.githubusercontent.com/86823305/164157139-db648a99-6ca1-4513-ac88-b8c099cc2992.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164157139-db648a99-6ca1-4513-ac88-b8c099cc2992.png)
   - funding 버튼(api/posts/funding/<id>)을 누르면 펀딩을 1회 하게된다
-  - ![image](https://user-images.githubusercontent.com/86823305/164157238-9d60ea0b-751d-4adc-8d3d-4572ed863407.png)
+  > ![image](https://user-images.githubusercontent.com/86823305/164157238-9d60ea0b-751d-4adc-8d3d-4572ed863407.png)
 
   
 
